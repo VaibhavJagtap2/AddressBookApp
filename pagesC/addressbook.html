@@ -5,101 +5,12 @@
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
         <title>AddressBook Form</title>
-        <style type="text/css">
-            body{
-                margin: 0;
-                height: 50%;
-            }
-            .header{
-                padding: 15px 0;
-                background-color: black;
-            }
-            .header-content{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                border: 0px solid yellow;
-            }
-            .logo-content{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                border: solid yellow;
-                width: 80%;
-            }
-            .logo-content-img{
-                border: solid gray;
-            }
-            .book-text{
-                font: normal normal bold 20px/25px Montserrat;
-                font-family: "Montserrat",sans-serif;
-                letter-spacing: 0px;
-                color: yellowgreen;
-                text-transform: capitalize;
-            }
-            .address-book{
-                color: white;
-            }
-            *{ box-sizing: border-box;}
-
-            .form-content{
-                min-height: cal(100%-80px);
-                background-color: aqua;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: 0px solid yellowgreen;
-            }
-            .form{
-                width: 65%;
-                padding: 44px 60px;
-                background: white 0% 0% no-repeat padding-box;
-                box-shadow: 1px solid white;
-                border-radius: 8px;
-                opacity: 1;
-            }
-            .form-head{
-                font: normal normal bold 24px/37px Roboto;
-                letter-spacing: 0px;
-                color: thistle;
-                text-transform: capitalize;
-                opacity: 1;
-                padding-bottom: 20px;
-            }
-            .row-content{
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 10px;
-                align-items: center;
-                border: 0px solid goldenrod;
-            }
-            .lable{
-                min-width: 140px;
-            }
-            label{
-                padding: 12px 12px 12px 0;
-                display: inline-block;
-            }
-            .text{
-                font-size: 16px;
-                color: darkred;
-                opacity: 1;
-                font-family: Roboto;
-            }
-            .input{
-                width: 100%;
-                padding: 12px;
-                border: 1px solid white;
-                border-radius: 4px;
-                resize: vertical;
-            }
-        </style>
+        <link rel="stylesheet" href="C:\Users\Admin\AddressbookApp\css\addressbookform.css" />
     </head>
     <body>
         <header class="header-content header">
             <div class = "logo-content">
-                <img src ="C:\Users\Admin\AddressbookApp\assets\addressbook.jpg">
+                <img src ="C:\Users\Admin\AddressbookApp\assets\images\book.jpg">
               <div>
                 <span class="book-text">CONTACT</span><br>
                 <span class="book-text address-book">BOOK</span>    
@@ -114,6 +25,27 @@
                 <div class="row-content">
                     <label class="label text" for="name">Name</label>
                     <input class="input" type="text" id="name" palceholder="Your Name.." required>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="profile">Profile Image</label>
+                    <div class="profile-radio-content">
+                        <label>
+                            <input type="radio" id="profile1" name="profile" value="C:\Users\Admin\AddressbookApp\assets\profile-images\Ellipse -1.png" required>
+                            <img class="profile" id="image1" src="C:\Users\Admin\AddressbookApp\assets\profile-images\Ellipse -1.png">
+                        </label>
+                        <label>
+                            <input type="radio" id="profile2" name="profile" value="C:\Users\Admin\AddressbookApp\assets\profile-images\Ellipse -2.png" required>
+                            <img class="profile" id="image2" src="C:\Users\Admin\AddressbookApp\assets\profile-images\Ellipse -2.png">
+                        </label>
+                        <label>
+                            <input type="radio" id="profile3" name="profile" value="C:\Users\Admin\AddressbookApp\assets\profile-images\Ellipse -3.png" required>
+                            <img class="profile" id="image3" src="C:\Users\Admin\AddressbookApp\assets\profile-images\Ellipse -3.png">
+                        </label>
+                        <label>
+                            <input type="radio" id="profile4" name="profile" value="C:\Users\Admin\AddressbookApp\assets\profile-images\Ellipse -4.png" required>
+                            <img class="profile" id="image4" src="C:\Users\Admin\AddressbookApp\assets\profile-images\Ellipse -4.png">
+                        </label>
+                    </div>
                 </div>
             </form>
         </div>
