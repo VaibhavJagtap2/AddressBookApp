@@ -1,56 +1,48 @@
-let personList;
 window.addEventListener('DOMContentLoaded', (event) => {
-    personList = getaddressBookDataFromStorage();
-    document.querySelector(".person-count").textContent = personList.length;
     createInnerHtml();
 });
 
-const getaddressBookDataFromStorage = () => {
-    return localStorage.getItem('AddressBookList') ?
-        JSON.parse(localStorage.getItem('AddressBookList')) : [];
-}
-
 const createInnerHtml = () => {
-    if (personList.length == 0) return;
-    const headerHtml = "<tr><th>Full Name</th><th>Phone Number</th><th>Address</th><th>City</th>" +
-        "<th>State</th><th>Zip</th><th>Actions</th></tr>";
-    let innerHtml = `${headerHtml}`;
-    for (const personBookData of personList) {
-        innerHtml = `${innerHtml}                   
+
+    const headerHtml = "<th>Name</th><th>Address</th><th>City</th>"+"<th>State</th><th>Zip</th><th>Phone number</th><th>Action</th>";
+    let addressBook = creteAddressBookJSON()[0];
+    const innerHtml = `${headerHtml}
+    
     <tr>
-      <td>${personBookData._name}</td>
-      <td>${personBookData._number}</td>
-      <td>${personBookData._address}</td>
-      <td>${personBookData._city}</td>
-      <td>${personBookData._state}</td>
-      <td>${personBookData._zip}</td>
-      <td>
-        <img id="${personBookData._id}" onclick="remove(this)" alt="delete"
-          src="C:/Users/Admin/AddressbookApp/assets/icons/delete-black-18dp.svg">
-        <img id="${personBookData._id}"  alt="edit" onclick="update(this)"
-          src="C:/Users/Admin/AddressbookApp/assets/icons/create-black-18dp.svg">
-      </td>
+        <td>${addressBook._name}</td> I
+        
+        <td>${addressBook._address}</td>
+        
+        <td><div class='dept-label'>${addressBook._city}</div></td>
+        
+        <td>${addressBook._state}</td>
+        
+        <td>${addressBook._zip}</td>
+        
+        <td>${addressBook._phonenumber}</td>
+        
+        <td><img name="1" onclick="remove(this)" src="C:/Users/Admin/AddressbookApp/assets/icons/delete-black-18dp.svg" alt="delete">
+        
+        <img name="1" onclick="update(this)" src="C:/Users/Admin/AddressbookApp/assets/icons/create-black-18dp.svg" alt="edit"> 
+        </td>
+    
     </tr>
-    `;
-    }
+`;
     document.querySelector('#table-display').innerHTML = innerHtml;
+    
 }
+const creteAddressBookJSON = () => { 
+    let addressBookListLocal = [
+    {
 
-const remove = (node) => {
-    let addressBookData = personList.find(addData => addData._id == node.id);
-    if (!addressBookData) return;
-    const index = personList
-        .map(addData => addData._id)
-        .indexOf(addressBookData._id);
-    personList.splice(index, 1);
-    localStorage.setItem("AddressBookList", JSON.stringify(personList));
-    document.querySelector('.person-count').textContent = personList.length;
-    createInnerHtml();
-
-}
-const update = (node) => {
-    let addressBookData = personList.find(addData => addData._id == node.id)
-    if (!addressBookData) return;
-    localStorage.setItem('editPer', JSON.stringify(addressBookData))
-    window.location.replace(site_properties.add_person_details_pages);
+        _name: 'Vaibhav',
+        _address: 'Shewalewadi',
+        _city: 'Pune',
+        _state: 'MAHARASHTRA',
+        _zip: '412307',
+        _phonenumber: '+91 9981228877',
+    
+    }, 
+ ];  
+    return addressBookListLocal;
 }
