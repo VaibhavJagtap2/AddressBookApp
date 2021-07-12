@@ -1,221 +1,215 @@
-body{
-    margin:0;
+html body {
+    margin: 0;
     height: 100%;
-}
-
-.header{
+  }
+  
+  .header {
     padding: 15px 0;
-    background-color: white;
-}
-
-.header-content{
+    background-color: #ffffff;
+  }
+  
+  .header-content {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border:0px solid green;
-}
-
-.logo-content
-{
-    display: flex;
-    flex-direction: row;
-    width:80%;
-    align-items: center;
-    border: 10px solid rgb(35, 159, 231); 
-}
-
-.logo-content-img{
-    border : 0px solid #2186eb;
-    height : 10%;
-}
-
-.addbook-text{
-    font: normal normal bold 25px/35px Montserrat;
-    font-family: "Montserrat",sans-serif;
-    letter-spacing: 0px;
-    margin:-1020px;
-    color: rgb(241, 93, 8);
-    text-transform: capitalize;
-    flex-direction: row;
-}
-.address-book{
-    color: #ee4d0d;
-    padding: 0px;
-    margin :-1020px;
-    flex-direction: row;
-}
-
-*{box-sizing: border-box;}
-
-/* UC 2*/
-.form-content {
-    padding-top: 40px;
-    min-height:calc(100% -80px);
-    background-color:#f7f6b8;
-    display:flex;
     justify-content: center;
     align-items: center;
     border: 0px solid green;
-    } 
+  }
+  
+  .logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 5px solid green;
+    width: 80%;
+  }
+  
+  .logo-content-img {
+    border: solid 0px #42515f;
+  }
+  
+  .add-text {
+    font: normal normal bold 25px/35px Montserrat;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    color: rgb(241, 93, 8);
+    text-transform: capitalize;
+    flex-direction: row;
+    opacity: 1;
+  }
+  
+  .address-book {
+    color: #ee4d0d;
+    box-sizing: border-box;
+    margin: -1020;
+    flex-direction: row;
+  }
+  
+  * {box-sizing: border-box;}
+  
+  .form-content {
+    padding-top: 40px;
+    min-height: calc(100% -80%);
+    background-color: #f7f6b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid #82a70c;
+  }
+  
+  .form {
+    width: 65%;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid rgb(240, 235, 235);
+    border-radius: 8px;
+    opacity: 1;
+  }
+  
+  .address-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #008cff 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border-radius: 8px 8px 0px 0px;
+  }
+  
+  .address-header-content {
+    text-align: left;
+    font: normal normal normal 25px/37px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 1;
+    margin: auto;
+    font-family: monospace;
+    font-weight: 600;
+  }
+  
+  .cancel-button {
+    padding: 5px;
+  }
+    
+  .row-content {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    padding: 10px 130px;
+  }
+  
+  .label {
+    text-align: left;
+    font: normal normal normal 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+  }
+  
+  .address-label {
+    text-align: left;
+    font: normal normal normal 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+  }
+  
+  .address-text {
+    height: 100px;
+  }
+  
+  .column-content {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .row-content {
+    display: flex;
+    padding-right: 150px;
+    padding-left: 150px;
+    flex-direction: column;
+    border: 0px solid green;
+  }
+  
+  .row-content-exp {
+    display: flex;
+    padding-right: 150px;
+    padding-left: 150px;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+    border: 0px solid green;
+  }
+  
+  .oneRow-content {
+    display: flex;
+    padding-right: 20px;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-left: 0px;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 0px solid green;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 12px;
+    margin-right: 15px;
+    border-radius: 4px;
+    resize: vertical;
+    border: 1px solid #bdbdbd;
+    opacity: 1;
+  }
+  
+  .select-input {
+    width: 100%;
+    padding: 12px;
+    margin-right: 15px;
+    border-radius: 4px;
+    resize: vertical;
+    border: 1px solid #bdbdbd;
+    opacity: 1;
+  }
+  
+.button{
+    font-size: 20px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    background-color:silver;
+    opacity: 1;
+    background: transparent;
+    border: none;
+    font-weight: 400;
+    min-width: 150px;
+    padding: 7px 7px;
+    border: 1px solid#707070;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-right: 100px;
+}
 
-    .form {
-        width: 70%;
-        background:white 0% 0% no-repeat padding-box;
-        box-shadow: 0px 3px 6px #00000029;
-        border-radius: 8px;
-        opacity: 1;
-    }
+.submitButton,.resetButton{
+    text-decoration: none;
+    text-align: center;
+    margin-block-end: 10px;
+    background-color: silver;
+}
 
-    .form-head {
-        font: normal normal bold 24px/37px Roboto;
-        letter-spacing: 0px;
-        color: white;
-        background-color: rgb(219, 80, 247);
-        text-align: center;
-        text-transform: capitalize;
-        opacity: 1;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+.submitButton:hover{
+    background-color:rgb(9, 247, 9) ;
+    color : white;
+}
 
-    .row-content {
-        padding-left: 100px;
-        padding-right: 100px;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        align-items: left;
-        border: 0px solid green;
-        padding-top: 40px;
-    }
+.resetButton:hover{
+    background-color: rgb(225, 240, 16);
+    color : blue;
+}
 
-    .head{
-        flex: display;
-        flex : row;
-    }
-
-    /* UC 3*/
-    .input {
-        width: 100%;
-        padding:20px;
-        border:1px solid black;
-        border-radius: 4px;
-        resize:vertical;
-    }
-    
-    .phone-content {
-        padding-left: 100px;
-        padding-right: 100px;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        align-items: left;
-        border: 0px solid green;
-        padding-top: 00px;
-    }
-    
-    .address {
-        width: 100%;
-        line-height: 70%;
-        padding:20px;
-        border:1px solid black;
-        border-radius: 4px;
-        resize:vertical;
-    }
-    
-    select{
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-        font: normal normal normal 16px Roboto;
-        letter-spacing: 0px;
-        color: #42525f;
-        background-color: transparent;
-        font: normal normal bold 15px/25px Montserrat;
-    } 
-    
-    .address-content {
-        padding-left: 100px;
-        padding-right: 100px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        align-items: left;
-        border: 0px solid cornflowerblue;
-        padding-top: 00px;
-        font: normal normal 25px/35px Montserrat;
-       
-    }
-    
-    .row-citystate {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 10px;
-        align-items: center;
-        border: 0px solid cornflowerblue;
-        padding-top: 00px;
-        
-    }
-    
-    .input1 {
-        width: 100%;
-        padding:10px;
-        border:1px solid black;
-        resize:vertical;
-        line-height:80%;
-        margin-block-start: -100px;
-    }
-
-    .buttonParent{
-        display: flex;
-        margin-bottom: 10px;
-        justify-content: space-between;
-        margin-top: 20px;
-        padding-left: 50px;
-        align-items: right;
-    }
-
-    .button{
-        font-size: 20px;
-        font-family: Roboto;
-        letter-spacing: 0px;
-        background-color:silver;
-        opacity: 1;
-        background: transparent;
-        border: none;
-        font-weight: 400;
-        min-width: 150px;
-        padding: 7px 7px;
-        border: 1px solid#707070;
-        cursor: pointer;
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-    
-    .submitButton,.resetButton{
-        text-decoration: none;
-        text-align: center;
-        margin-block-end: 10px;
-        background-color: silver;
-    }
-    
-    .submitButton:hover{
-        background-color:green ;
-        color : white;
-    }
-    
-    .resetButton:hover{
-        background-color: rgb(248, 137, 73);
-        color : blue;
-    }
-
-    
-    error-output{
-        margin-left: 10px;
-        font-size: 12px;
-        font-style: italic;
-        color: red;
-    }
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
